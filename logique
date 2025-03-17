@@ -1,1 +1,44 @@
+from interface import affiche_grille_fenetre, affiche_gagnant_fenetre, affiche_aucun_gagnant_fenetre, affiche_joueur_fenetre, NB_COLONNES, NB_LIGNES, ALIGNEMENT
+import math
 
+MODE_GRAPHIQUE = True
+
+def affiche_grille_terminal(jetons):
+    """
+    Affiche la grille de jeu dans le terminal en formatant les jetons selon une disposition de grille.
+    Args:
+        jetons (list): Une liste contenant les symboles des jetons pour chaque position de la grille.
+                       La taille de la liste doit correspondre à NB_COLONNES * NB_LIGNES.
+    Les constantes NB_COLONNES et NB_LIGNES doivent être définies dans le scope global du script pour que cette
+    fonction fonctionne correctement.
+    """
+    i = NB_COLONNES*(NB_LIGNES-1)
+    while i >= 0:
+        print(jetons[i:i+NB_COLONNES])
+        i = i - NB_COLONNES
+
+    print()
+#Cette fonction prend en entrée une liste `jetons` qui contient les symboles (par exemple, 'R', 'J', ou ' ')
+#représentant l'état actuel de chaque position dans une grille de jeu structurée avec des lignes et des colonnes.
+#Elle affiche cette liste sous la forme d'une grille dans le terminal, avec les positions de jetons disposées de bas en
+#haut et de gauche à droite selon les constantes NB_COLONNES et NB_LIGNES définissant la taille de la grille.
+#La grille est affichée en commençant par la dernière ligne et en remontant vers la première ligne.
+
+
+
+def affiche_joueur_qui_commence_terminal(couleur):
+    """
+    Affiche dans le terminal le joueur qui commencera la partie, selon la couleur spécifiée.
+    Args:
+        couleur (str): La couleur du joueur qui doit commencer. Les valeurs attendues sont 'yellow' ou 'red'.
+        Si une couleur différente de 'yellow' ou 'red' est passée en argument, aucun message spécifique n'est affiché.
+        Cette fonction pourrait être étendue pour gérer des cas d'erreur ou des valeurs inattendues de manière plus robuste.
+    """
+    if couleur == 'yellow':
+        print('Les jaunes commencent')
+    elif couleur == 'red':
+        print('Les rouges commencent')
+
+#Cette fonction annonce dans le terminal quel joueur commence la partie en se basant sur la couleur fournie en argument.
+#Elle accepte deux valeurs pour la couleur : 'yellow' pour les jaunes et 'red' pour les rouges. Selon la couleur passée,
+#la fonction affiche un message approprié.
