@@ -1,1 +1,32 @@
+import tkinter as tk
+import random as rd
+import math
+
+NB_PARTIES = 1000000  
+MODE_GRAPHIQUE = True  
+                       
+TEMPS_CHUTE = 0.1  
+LARGEUR_GRILLE = 480  
+ESPACEMENT = LARGEUR_GRILLE / 64  
+                                  
+
+NB_COLONNES = 7  
+NB_LIGNES = 6  
+ALIGNEMENT = 4  
+
+
+# CREATION DE LA FENETRE TKINTER
+
+fenetreJeu = tk.Tk()
+
+fenetreJeu.title("Puissance 4")
+
+fenetreJeu.config(bg="dark slate gray") 
+
+def hauteur_grille(r):
+    return 2*NB_LIGNES*r + (NB_LIGNES + 1)*ESPACEMENT
+
+
+def rayon():
+     return (LARGEUR_GRILLE - (NB_COLONNES + 1)*ESPACEMENT) / (2*NB_COLONNES)
 
