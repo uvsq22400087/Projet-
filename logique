@@ -32,8 +32,8 @@ def affiche_aucun_gagnant_terminal():
 
 def affiche_score_terminal(victoires):
     [jaunes, rouges, nulles] = victoires
-    print('Jaunes : ' + str(jaunes))  # score des jaunes
-    print('Rouges : ' + str(rouges))  # score des rouges
-    print('Nulles : ' + str(nulles))  # Parties nulles
+    print('Jaunes : ' + str(jaunes)) 
+    print('Rouges : ' + str(rouges))  
+    print('Nulles : ' + str(nulles))  
     print()
 
