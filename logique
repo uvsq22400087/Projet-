@@ -20,23 +20,20 @@ def affiche_joueur_terminal(couleur):
         print('Les jaunes jouent')
     elif couleur == 'red':
         print('Les rouges jouent')
-
+    
 def affiche_gagnant_terminal(couleur):
     if couleur == 'yellow':
         print('Les jaunes ont gagné', end='')
     elif couleur == 'red':
         print('Les rouges ont gagné', end='')
 
-def affiche_joueur_terminal(couleur):
-    if couleur == 'yellow':
-        print('Les jaunes jouent')
-    elif couleur == 'red':
-        print('Les rouges jouent')
+def affiche_aucun_gagnant_terminal():
+    print('Match nul!')
 
-def affiche_gagnant_terminal(couleur):
-    if couleur == 'yellow':
-        print('Les jaunes ont gagné', end='')
-    elif couleur == 'red':
-        print('Les rouges ont gagné', end='')
-
+def affiche_score_terminal(victoires):
+    [jaunes, rouges, nulles] = victoires
+    print('Jaunes : ' + str(jaunes))  # score des jaunes
+    print('Rouges : ' + str(rouges))  # score des rouges
+    print('Nulles : ' + str(nulles))  # Parties nulles
+    print()
 
