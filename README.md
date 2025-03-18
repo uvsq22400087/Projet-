@@ -1,7 +1,11 @@
 # Projet-
-Le groupe de TD (filière et numéro) :
-Les noms de tous les étudiants du groupe de projet : 
+Le groupe de TD (filière et numéro) : L1 BI (licence portail biologie et informatique) TD 03
+
+Les noms de tous les étudiants du groupe de projet : TALEB Sara, Hawa, Nawel, Seçil
+
 L'url de dépôt du projet sur github :
-un fichier README doit documenter l'utilisation du programme.
-un responsable GitHub:
+
+Utilisation du programme:
+
+un responsable GitHub: Seçil
 un responsable de la qualité du code:
