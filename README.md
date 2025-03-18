@@ -3,7 +3,7 @@ Le groupe de TD (filière et numéro) : L1 BI (licence portail biologie et infor
 
 Les noms de tous les étudiants du groupe de projet : TALEB Sara, Hawa, Nawel, AKDENIZ Seçil
 
-L'url de dépôt du projet sur github :
+L'url de dépôt du projet sur github : https://github.com/uvsq22400087/Projet-
 
 Utilisation du programme:
 
