@@ -1,63 +1,42 @@
-from interface import affiche_grille_fenetre, affiche_gagnant_fenetre, affiche_aucun_gagnant_fenetre, affiche_joueur_fenetre, NB_COLONNES, NB_LIGNES, ALIGNEMENT
 import math
 
 MODE_GRAPHIQUE = True
 
 def affiche_grille_terminal(jetons):
-    """
-    Affiche la grille de jeu dans le terminal en formatant les jetons selon une disposition de grille.
-    Args:
-        jetons (list): Une liste contenant les symboles des jetons pour chaque position de la grille.
-                       La taille de la liste doit correspondre à NB_COLONNES * NB_LIGNES.
-    Les constantes NB_COLONNES et NB_LIGNES doivent être définies dans le scope global du script pour que cette
-    fonction fonctionne correctement.
-    """
     i = NB_COLONNES*(NB_LIGNES-1)
     while i >= 0:
         print(jetons[i:i+NB_COLONNES])
         i = i - NB_COLONNES
-
     print()
 
 def affiche_joueur_qui_commence_terminal(couleur):
-    """
-    Affiche dans le terminal le joueur qui commencera la partie, selon la couleur spécifiée.
-    Args:
-        couleur (str): La couleur du joueur qui doit commencer. Les valeurs attendues sont 'yellow' ou 'red'.
-        Si une couleur différente de 'yellow' ou 'red' est passée en argument, aucun message spécifique n'est affiché.
-        Cette fonction pourrait être étendue pour gérer des cas d'erreur ou des valeurs inattendues de manière plus robuste.
-    """
     if couleur == 'yellow':
         print('Les jaunes commencent')
     elif couleur == 'red':
         print('Les rouges commencent')
 
 def affiche_joueur_terminal(couleur):
-    """
-    Affiche dans le terminal le joueur actuel selon la couleur spécifiée.
-    Args:
-        couleur (str): La couleur du joueur qui est en train de jouer. Accepte 'yellow' pour les jaunes et 'red' pour les rouges.
-    Cette fonction annonce dans le terminal quel joueur est en train de jouer. Elle vérifie la couleur passée en argument
-    et affiche un message approprié en fonction de cette couleur.
-    """
     if couleur == 'yellow':
         print('Les jaunes jouent')
     elif couleur == 'red':
         print('Les rouges jouent')
 
 def affiche_gagnant_terminal(couleur):
-    """
-    Affiche dans le terminal le joueur gagnant selon la couleur spécifiée.
-    Args:
-        couleur (str): La couleur du joueur qui a gagné la partie. Doit être 'yellow' ou 'red'.
-    Cette fonction annonce le gagnant de la partie en fonction de la couleur fournie. Elle affiche un message
-    indiquant le joueur qui a remporté la partie sans passer à la ligne suivante grâce à l'utilisation de `end=''`.
-    """
     if couleur == 'yellow':
         print('Les jaunes ont gagné', end='')
     elif couleur == 'red':
         print('Les rouges ont gagné', end='')
 
+def affiche_joueur_terminal(couleur):
+    if couleur == 'yellow':
+        print('Les jaunes jouent')
+    elif couleur == 'red':
+        print('Les rouges jouent')
 
+def affiche_gagnant_terminal(couleur):
+    if couleur == 'yellow':
+        print('Les jaunes ont gagné', end='')
+    elif couleur == 'red':
+        print('Les rouges ont gagné', end='')
 
 
