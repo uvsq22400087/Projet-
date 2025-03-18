@@ -8,4 +8,5 @@ L'url de dépôt du projet sur github :
 Utilisation du programme:
 
 un responsable GitHub: Seçil
+
 un responsable de la qualité du code:
