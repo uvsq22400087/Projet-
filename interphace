@@ -30,3 +30,32 @@ def hauteur_grille(r):
 def rayon():
      return (LARGEUR_GRILLE - (NB_COLONNES + 1)*ESPACEMENT) / (2*NB_COLONNES)
 
+def creation_cercle(x, y, r, c, tag):
+    identifiant = grille.create_oval((x-r, y-r), (x+r, y+r), fill=c, width=0, tags=tag)
+    return identifiant
+
+def creation_grille(r):
+   ligne = 1
+   while ligne <= NB_LIGNES:
+      colonne = 1 
+      while colonne <= NB_COLONNES:
+          creation_cercle(ESPACEMENT + r + (colonne-1)*(ESPACEMENT + 2*r), ESPACEMENT + r + (ligne-1)*(ESPACEMENT + 2*r), r, 'white', 'trou')
+            colonne += 1
+      ligne += 1    
+def creation_jeton(colonne, ligne, c, r): 
+    identifiant = creation_cercle(colonne*(ESPACEMENT+2*r)-r, (NB_LIGNES-ligne+1)*(ESPACEMENT+2*r)-r, r, c, 'jeton')
+    return identifiant 
+
+def mouvement_jeton(identifiant, r):
+    grille.move(identifiant, 0, ESPACEMENT+2*r)
+
+def affiche_grille_fenetre(colonne, ligneSupport, couleur):
+     ligne = NB_LIGNES
+     r = rayon()
+     identifiant = creation_jeton(colonne, ligne, couleur, r)
+     while ligne > ligneSupport: 
+        if ligne < NB_LIGNES:
+            mouvement_jeton(identifiant, r)
+        fenetreJeu.update() 
+        time.sleep(TEMPS_CHUTE)
+        ligne = ligne - 1
