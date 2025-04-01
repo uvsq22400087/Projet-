@@ -36,4 +36,5 @@ def affiche_score_terminal(victoires):
     print('Rouges : ' + str(rouges))  
     print('Nulles : ' + str(nulles))  
     print()
-
+def initialise_liste_jetons():
+ return [0] * (NB_COLONNES * NB_LIGNES)
